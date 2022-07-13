@@ -10,3 +10,6 @@ def  perfil (request):
 
 def registro(request):
     return render (request ,'core/registro.html') 
+
+def suscripcion(request):
+    return render (request ,'core/suscripcion.html')

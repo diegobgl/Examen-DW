@@ -16,11 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 import api_rest
-from core.views import home , perfil, registro
+from core.views import home , perfil, registro, suscripcion
 
 urlpatterns = [
      path('', home, name="home"),
-     path('perfil',perfil, name ="home"),
+     path('perfil',perfil, name ="perfil"),
      path('registro', registro, name ="registro"),
+     path('suscripcion', suscripcion, name ="suscripcion"),
      path('api_rest/', include('api_rest.urls')),
 ]
