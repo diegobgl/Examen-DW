@@ -16,6 +16,8 @@
 </head>
 <body>
       {% block contenido %}
+
+      <!--nav menu web-->
      <div clas="container-fluid"> 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Tienda - Mascotas</a>
@@ -29,17 +31,17 @@
               <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="#">Nosotros</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
                 Tienda
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="{% url 'registro'%}">Registro</a>
+                <a class="dropdown-item" href="#">Suscripcion donaciones</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
+                <a class="dropdown-item" href="#">Tracking web</a>
               </div>
             </li>
             <li class="nav-item">
@@ -51,6 +53,10 @@
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
           </form>
         </div>
+        <!--nav menu web-->
+
+        
+        <!--inicio carusel fotos -->
       </nav>  
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -79,43 +85,243 @@
         </button>
       </div>
 
-      <div class="card">
-        <div class="card-header">
-          Featured
-        </div>
-        <div class="card-body">
-          <h5 class="card-title">Special title treatment</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-    </div>
 
-      <!--layout bloque informativo-->
+
+
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+
+      <!--contenido portada-->
+  <!--primer bloque contenido-->
+  <div class="container-fluid">
+    <section class="pt-5 pb-5">
       <div class="container">
-        <div class="card" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <div class="row">
+          <div class="col-6">
+            <h3 class="mb-3">Productos y Servicios </h3>
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">An item</li>
-            <li class="list-group-item">A second item</li>
-            <li class="list-group-item">A third item</li>
-          </ul>
-          <div class="card-body">
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
+          <div class="col-6 text-right">
+            <a class="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators2" role="button" data-slide="prev">
+              <i class="fa fa-arrow-left"></i>
+            </a>
+            <a class="btn btn-primary mb-3 " href="#carouselExampleIndicators2" role="button" data-slide="next">
+              <i class="fa fa-arrow-right"></i>
+            </a>
+          </div>
+          <div class="col-12">
+            <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="row">
+
+                    <div class="col-md-4 mb-3">
+                      <div class="card">
+                        <img class="img-fluid" alt="100%x280"
+                          src="{% static 'producto1.jpg'%}">
+                        <div class="card-body">
+                          <h4 class="card-title">Tienda web</h4>
+                          <p class="card-text">
+                            Variedad de productos para mascotas
+                          </p>
+
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                      <div class="card">
+                        <img class="img-fluid" alt="100%x280"
+                          src="{% static 'fundaciones.jpg'%}">
+                        <div class="card-body">
+                          <h4 class="card-title">Fundaciones</h4>
+                          <p class="card-text">Red de fundaciones asociadas
+                          </p>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                      <div class="card">
+                        <img class="img-fluid" alt="100%x280"
+                          src="{% static 'socios.jpg' %}">
+                        <div class="card-body">
+                          <h4 class="card-title">Socios</h4>
+                          <p class="card-text">aca ira la noticia de nacional 2.
+                          </p>
+
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="row">
+
+                    <div class="col-md-4 mb-3">
+                      <div class="card">
+                        <img class="img-fluid" alt="100%x280"
+                          src="{% static 'login.png' %}">
+                        <div class="card-body">
+                          <h4 class="card-title">Registro clientes</h4>
+                          <p class="card-text">Registrate en nuestro sitio para poder comprar.
+                          </p>
+
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                      <div class="card">
+                        <img class="img-fluid" alt="100%x280"
+                          src="{% static 'donaciones.jpg'%}">
+                        <div class="card-body">
+                          <h4 class="card-title">Suscripcion Donaciones</h4>
+                          <p class="card-text">aca ira la noticia de internacional 3.
+                          </p>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                      <div class="card">
+                        <img class="img-fluid" alt="100%x280"
+                          src="{% static 'contacto.jpg' %}">
+                        <div class="card-body">
+                          <h4 class="card-title">Contactanos</h4>
+                          <p class="card-text">Envianos un correo con tus dudas y te contactaremos.
+                          </p>
+
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
 
-      
-      {% endblock%}
+      <!--segundo cloque de imagenes contenido-->
 
-   
+        <!--cuerpo noticias-->
+  <div class="container-fluid">
+    <section class="pt-5 pb-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <h3 class="mb-3">Ofertas </h3>
+          </div>
+          <div class="col-6 text-right">
+            <a class="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators3" role="button" data-slide="prev">
+              <i class="fa fa-arrow-left"></i>
+            </a>
+            <a class="btn btn-primary mb-3 " href="#carouselExampleIndicators3" role="button" data-slide="next">
+              <i class="fa fa-arrow-right"></i>
+            </a>
+          </div>
+          <div class="col-12">
+            <div id="carouselExampleIndicators3" class="carousel slide" data-ride="carousel">
+
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="row">
+
+                    <div class="col-md-4 mb-3">
+                      <div class="card">
+                        <img class="img-fluid" alt="100%x280"
+                          src="{% static 'producto1.jpg' %}">
+                        <div class="card-body">
+                          <h4 class="card-title">Bandanas</h4>
+                          <p class="card-text">aca ira la noticia de deporte 2
+                          </p>
+
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                      <div class="card">
+                        <img class="img-fluid" alt="100%x280"
+                          src="{% static 'producto2.jpg' %}">
+                        <div class="card-body">
+                          <h4 class="card-title">Correas</h4>
+                          <p class="card-text">aca ira la noticia de internacional 2.
+                          </p>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                      <div class="card">
+                        <img class="img-fluid" alt="100%x280"
+                          src="{% static 'producto3.jpg' %}">
+                        <div class="card-body">
+                          <h4 class="card-title">Identidificadores</h4>
+                          <p class="card-text">aca ira la noticia de nacional 2.
+                          </p>
+
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="row">
+
+                    <div class="col-md-4 mb-3">
+                      <div class="card">
+                        <img class="img-fluid" alt="100%x280"
+                          src="{% static 'snack.jpg' %}">
+                        <div class="card-body">
+                          <h4 class="card-title">Snacks</h4>
+                          <p class="card-text">aca ira la noticia de deporte 3.
+                          </p>
+
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                      <div class="card">
+                        <img class="img-fluid" alt="100%x280"
+                          src="{% static 'vestuario.png' %}">
+                        <div class="card-body">
+                          <h4 class="card-title">Vestuario</h4>
+                          <p class="card-text">aca ira la noticia de internacional 3.
+                          </p>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                      <div class="card">
+                        <img class="img-fluid" alt="100%x280"
+                          src="{% static 'juguetes.jpg' %}">
+                        <div class="card-body">
+                          <h4 class="card-title">Juguetes</h4>
+                          <p class="card-text">aca ira la noticia de nacional 3.
+                          </p>
+
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endblock%}
 
 
 </body>

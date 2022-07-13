@@ -51,5 +51,6 @@ class venta(models.Model):
 
 
     
-
+# class registro(models.Model):
+#     id = 
     

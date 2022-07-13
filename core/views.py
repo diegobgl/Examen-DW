@@ -4,3 +4,9 @@ from django.shortcuts import  redirect, render
 
 def  home (request):
     return render (request ,'core/home.html')
+
+def  perfil (request):
+    return render (request ,'core/perfil.html')
+
+def registro(request):
+    return render (request ,'core/registro.html') 
